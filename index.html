@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerrero & Abogados - Bufete Legal Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container1">
+            <div class="logo">
+                    <img src="logo.png" alt="Guerrero & Abogados Logo" class="logo-image">
+                    <div class="logo-text">
+                        <!--<h1>GUERRERO</h1>
+                        <p>& ABOGADOS</p>-->
+
+                    </div>
+                </div>
+        </div>
+        <div class="container">
+
+            <div class="header-content">
+                
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                    <!--<button class="btn btn-primary">Consulta Gratuita</button>-->
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile" id="mobileNav">
+                <a href="#inicio" class="nav-link-mobile">Inicio</a>
+                <a href="#sobre-nosotros" class="nav-link-mobile">Sobre Nosotros</a>
+                <a href="#servicios" class="nav-link-mobile">Servicios</a>
+                <a href="#contacto" class="nav-link-mobile">Contacto</a>
+                <!--<button class="btn btn-primary">Consulta Gratuita</button>-->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        
+        <!-- Animated Background Elements -->
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">GUERRERO</span>
+                    <br>
+                    <span class="white-text">& ABOGADOS</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Nuestra misión es proteger los derechos de nuestros clientes y brindar el acompañamiento legal necesario en cada etapa de sus procesos, desde asesoría preventia hasta la representación judicial.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToSection('contacto')">
+                        Contáctanos
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="btn btn-outline btn-large" onclick="scrollToSection('servicios')">
+                        Nuestros Servicios
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Casos Ganados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Tasa de Éxito</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="stat-number">24H</div>
+                    <div class="stat-label">Atención al Cliente</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-nosotros" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <p class="section-subtitle">
+                    Guerrero y Abogados es una firma legal, comprometida con la excelencia jurídica, la ética profesional y el servicio personalizado. Nos especializamos en brindar soluciones legales, integrales y estratégicas a personas naturales y jurídicas con un enfoque humano, transparente y eficiente.
+                </p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-icon blue">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Protección Total</h3>
+                            <p>Defendemos tus derechos con estrategias legales sólidas y un enfoque personalizado para cada caso.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon yellow">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Equipo Experto</h3>
+                            <p>Contamos con abogados especializados en diferentes áreas del derecho para brindarte la mejor asesoría.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon green">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Resultados Comprobados</h3>
+                            <p>Más de 200 casos ganados y una tasa de éxito del 98% nos respaldan como líderes en el sector legal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="abogado.jpeg" alt="Equipo de abogados profesionales">
+                        <div class="image-bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">
+                    Ofrecemos servicios legales integrales con la más alta calidad y profesionalismo
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon blue">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Derecho Civil</h3>
+                    <p>Contratos, responsabilidad civil, daños y perjuicios, y disputas comerciales.</p>
+                    <button class="btn btn-outline">
+                        Más Información
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon red">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Derecho Penal</h3>
+                    <p>Defensa en procesos penales, delitos económicos y representación legal.</p>
+                    <button class="btn btn-outline">
+                        Más Información
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon green">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Derecho Laboral</h3>
+                    <p>Despidos injustificados, acoso laboral, y negociación de contratos.</p>
+                    <button class="btn btn-outline">
+                        Más Información
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon purple">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Derecho Familiar</h3>
+                    <p>Divorcios, custodia de menores, pensiones alimenticias y adopciones.</p>
+                    <button class="btn btn-outline">
+                        Más Información
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon yellow">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Derecho Comercial</h3>
+                    <p>Constitución de empresas, fusiones, adquisiciones y compliance.</p>
+                    <button class="btn btn-outline">
+                        Más Información
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!--<div class="service-card">
+                    <div class="service-icon indigo">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Derecho Privado</h3>
+                    <p>Compraventa de propiedades, arrendamientos y resolución de conflictos.</p>
+                    <button class="btn btn-outline">
+                        Más Información
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Excelente servicio, me ayudaron a resolver un caso complejo de manera profesional y eficiente."</p>
+                    <div class="testimonial-author">
+                        <strong>María González</strong>
+                        <span>Empresaria</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Los recomiendo ampliamente. Su dedicación y conocimiento legal son excepcionales."</p>
+                    <div class="testimonial-author">
+                        <strong>Carlos Rodríguez</strong>
+                        <span>Comerciante</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Gracias a su asesoría legal, pude resolver mi situación familiar de la mejor manera."</p>
+                    <div class="testimonial-author">
+                        <strong>Ana Martínez</strong>
+                        <span>Profesional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title white">Contáctanos</h2>
+                <p class="section-subtitle white">
+                    Estamos aquí para ayudarte. Contáctanos para una consulta gratuita.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="contact-form-card">
+                        <h3>Envíanos un Mensaje</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <input type="text" placeholder="Nombre completo" required>
+                                <input type="email" placeholder="Correo electrónico" required>
+                            </div>
+                            <input type="tel" placeholder="Teléfono" required>
+                            <input type="text" placeholder="Asunto" required>
+                            <textarea placeholder="Describe tu caso..." rows="4" required></textarea>
+                            <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@guerrerosyabogados.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Av. Principal 123, Ciudad</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="contact-info-card">
+                        <h4>Síguenos en Redes Sociales</h4>
+                        <div class="social-links">
+                            <a href="https://facebook.com" target="_blank" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/+573175533730" target="_blank" class="social-link whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <!-- <div class="footer-content">
+                <div class="footer-brand">
+                    
+                    <p>Defendemos tus derechos con la fuerza de guerreros y la sabiduría de expertos legales. Tu justicia es nuestra misión.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5551234567" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Derecho Civil</a></li>
+                        <li><a href="#">Derecho Penal</a></li>
+                        <li><a href="#">Derecho Laboral</a></li>
+                        <li><a href="#">Derecho Familiar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@guerrerosyabogados.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Guerreros & Abogados. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>-->
+    <div class="footer-bottom">
+                <p>&copy; 2024 Guerreros & Abogados. Todos los derechos reservados.</p>
+            </div>
+    <script src="script.js"></script>
+</body>
+</html>
