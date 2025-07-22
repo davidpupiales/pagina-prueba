@@ -13,15 +13,53 @@ mobileMenuBtn.addEventListener("click", () => {
   }
 })
 
-// Header Scroll Effect
-const header = document.getElementById("header")
+// Floating Navigation
+const floatingNav = document.getElementById("floatingNav")
+const floatingNavToggle = document.getElementById("floatingNavToggle")
+const floatingNavMenu = document.getElementById("floatingNavMenu")
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled")
-  } else {
-    header.classList.remove("scrolled")
+console.log("Floating nav elements:", { floatingNav, floatingNavToggle, floatingNavMenu })
+
+// Toggle floating navigation menu
+if (floatingNavToggle) {
+  floatingNavToggle.addEventListener("click", (e) => {
+    console.log("Toggle clicked!")
+    e.stopPropagation()
+    if (floatingNavMenu) {
+      floatingNavMenu.classList.toggle("active")
+      console.log("Menu active:", floatingNavMenu.classList.contains("active"))
+    }
+  })
+}
+
+// Close floating menu when clicking outside
+document.addEventListener("click", (e) => {
+  if (floatingNav && !floatingNav.contains(e.target)) {
+    if (floatingNavMenu) {
+      floatingNavMenu.classList.remove("active")
+    }
   }
+})
+
+// Floating navigation links
+document.querySelectorAll(".floating-nav-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault()
+    const targetId = this.getAttribute("href").substring(1)
+    scrollToSection(targetId)
+    if (floatingNavMenu) {
+      floatingNavMenu.classList.remove("active")
+    }
+  })
+})
+
+// Navigation Links Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault()
+    const targetId = this.getAttribute("href").substring(1)
+    scrollToSection(targetId)
+  })
 })
 
 // Smooth Scrolling Function
@@ -38,15 +76,6 @@ function scrollToSection(sectionId) {
     menuIcon.className = "fas fa-bars"
   }
 }
-
-// Navigation Links Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault()
-    const targetId = this.getAttribute("href").substring(1)
-    scrollToSection(targetId)
-  })
-})
 
 // Mobile Navigation Links
 document.querySelectorAll(".nav-link-mobile").forEach((link) => {
@@ -336,4 +365,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const img = new Image()
     img.src = src
   })
+})
+
+// Service Modals
+function openServiceModal(serviceType) {
+  const modal = document.getElementById(serviceType + "Modal")
+  if (modal) {
+    modal.classList.add("active")
+    document.body.style.overflow = "hidden"
+  }
+}
+
+function closeServiceModal(serviceType) {
+  const modal = document.getElementById(serviceType + "Modal")
+  if (modal) {
+    modal.classList.remove("active")
+    document.body.style.overflow = "auto"
+  }
+}
+
+// Close modal when clicking outside
+document.querySelectorAll(".service-modal").forEach((modal) => {
+  modal.addEventListener("click", function (e) {
+    if (e.target === this) {
+      this.classList.remove("active")
+      document.body.style.overflow = "auto"
+    }
+  })
+})
+
+// Close modal with Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".service-modal.active").forEach((modal) => {
+      modal.classList.remove("active")
+      document.body.style.overflow = "auto"
+    })
+  }
 })
