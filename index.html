@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -42,15 +43,28 @@
             </div>
 
             <!-- Mobile Navigation -->
-            <nav class="nav-mobile" id="mobileNav">
+            <!--<nav class="nav-mobile" id="mobileNav">
                 <a href="#inicio" class="nav-link-mobile">Inicio</a>
                 <a href="#sobre-nosotros" class="nav-link-mobile">Sobre Nosotros</a>
                 <a href="#servicios" class="nav-link-mobile">Servicios</a>
                 <a href="#contacto" class="nav-link-mobile">Contacto</a>
-                <!--<button class="btn btn-primary">Consulta Gratuita</button>-->
-            </nav>
+                <button class="btn btn-primary">Consulta Gratuita</button>
+            </nav>-->
         </div>
     </header>
+
+    <!-- Floating Navigation -->
+    <div class="floating-nav" id="floatingNav">
+        <!--<button class="floating-nav-toggle" id="floatingNavToggle">
+            <i class="fas fa-bars"></i>
+        </button>-->
+        <div class="floating-nav-menu" id="floatingNavMenu">
+            <a href="#inicio" class="floating-nav-link">Inicio</a>
+            <a href="#sobre-nosotros" class="floating-nav-link">Sobre Nosotros</a>
+            <a href="#servicios" class="floating-nav-link">Servicios</a>
+            <a href="#contacto" class="floating-nav-link">Contacto</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
@@ -65,6 +79,7 @@
 
         <div class="container hero-content">
             <div class="hero-text">
+                <img src="logo.png" alt="Guerrero & Abogados Logo" class="hero-logo">
                 <h1 class="hero-title">
                     <span class="gradient-text">GUERRERO</span>
                     <br>
@@ -199,7 +214,7 @@
                     </div>
                     <h3>Derecho Civil</h3>
                     <p>Contratos, responsabilidad civil, daños y perjuicios, y disputas comerciales.</p>
-                    <button class="btn btn-outline">
+                    <button class="btn btn-outline" onclick="openServiceModal('civil')">
                         Más Información
                         <i class="fas fa-chevron-right"></i>
                     </button>
@@ -211,7 +226,7 @@
                     </div>
                     <h3>Derecho Penal</h3>
                     <p>Defensa en procesos penales, delitos económicos y representación legal.</p>
-                    <button class="btn btn-outline">
+                    <button class="btn btn-outline" onclick="openServiceModal('penal')">
                         Más Información
                         <i class="fas fa-chevron-right"></i>
                     </button>
@@ -223,7 +238,7 @@
                     </div>
                     <h3>Derecho Laboral</h3>
                     <p>Despidos injustificados, acoso laboral, y negociación de contratos.</p>
-                    <button class="btn btn-outline">
+                    <button class="btn btn-outline" onclick="openServiceModal('laboral')">
                         Más Información
                         <i class="fas fa-chevron-right"></i>
                     </button>
@@ -235,7 +250,7 @@
                     </div>
                     <h3>Derecho Familiar</h3>
                     <p>Divorcios, custodia de menores, pensiones alimenticias y adopciones.</p>
-                    <button class="btn btn-outline">
+                    <button class="btn btn-outline" onclick="openServiceModal('familiar')">
                         Más Información
                         <i class="fas fa-chevron-right"></i>
                     </button>
@@ -247,7 +262,7 @@
                     </div>
                     <h3>Derecho Comercial</h3>
                     <p>Constitución de empresas, fusiones, adquisiciones y compliance.</p>
-                    <button class="btn btn-outline">
+                    <button class="btn btn-outline" onclick="openServiceModal('comercial')">
                         Más Información
                         <i class="fas fa-chevron-right"></i>
                     </button>
@@ -459,6 +474,91 @@
     <div class="footer-bottom">
                 <p>&copy; 2024 Guerreros & Abogados. Todos los derechos reservados.</p>
             </div>
+
+    <!-- Service Modals -->
+    <div class="service-modal" id="civilModal">
+        <div class="service-modal-content">
+            <div class="service-modal-header">
+                <h3 class="service-modal-title">Derecho Civil</h3>
+                <button class="service-modal-close" onclick="closeServiceModal('civil')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="service-modal-body">
+                <p>En nuestra firma brindamos asesoría integral en Derecho Civil, abarcando todas las relaciones jurídicas entre particulares. Nos especializamos en contratos de compraventa, arrendamiento, prestación de servicios y suministro, así como en la resolución de conflictos derivados de incumplimientos contractuales.</p>
+                <p>Atendemos casos de responsabilidad civil extracontractual, daños y perjuicios, disputas comerciales entre empresas, y procesos de cobro ejecutivo. También brindamos asesoría en derecho de obligaciones, negociación y redacción de contratos, y representación en procesos judiciales civiles.</p>
+                <p>Nuestro equipo garantiza un acompañamiento personalizado desde la consulta inicial hasta la resolución definitiva del caso, siempre buscando las mejores alternativas para proteger los intereses de nuestros clientes.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-modal" id="penalModal">
+        <div class="service-modal-content">
+            <div class="service-modal-header">
+                <h3 class="service-modal-title">Derecho Penal</h3>
+                <button class="service-modal-close" onclick="closeServiceModal('penal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="service-modal-body">
+                <p>En nuestra firma brindamos asesoría y representación integral en el   mbito del Derecho Penal, acompañando tanto a personas acusadas como a víctimas durante todas las etapas del proceso.</p>
+                <p>Atendemos casos de delitos contra la vida, la libertad, la integridad personal, el patrimonio, así como delitos sexuales, informáticos y contra la administración pública.</p>
+                <p>Nuestro equipo ofrece defensa técnica, participación en audiencias y juicios orales, gestión de medidas de aseguramiento, revisión de medidas privativas de libertad y acompañamiento en procesos de conciliación penal cuando la ley lo permite, garantizando siempre la protección de los derechos fundamentales de nuestros clientes.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-modal" id="laboralModal">
+        <div class="service-modal-content">
+            <div class="service-modal-header">
+                <h3 class="service-modal-title">Derecho Laboral</h3>
+                <button class="service-modal-close" onclick="closeServiceModal('laboral')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="service-modal-body">
+                <p>Ofrecemos asesoría integral en Derecho Laboral tanto para empleadores como para trabajadores, garantizando el cumplimiento de la normatividad vigente y la protección de los derechos laborales.</p>
+                <p>Atendemos casos de despidos injustificados, acoso laboral, discriminación en el trabajo, reclamaciones de prestaciones sociales, liquidaciones laborales, y negociación de contratos de trabajo.</p>
+                <p>También brindamos representación en procesos ante el Ministerio de Trabajo, demandas laborales, y asesoría en la implementación de políticas de recursos humanos que cumplan con la legislación laboral colombiana.</p>
+                <p>Nuestro objetivo es encontrar soluciones efectivas que protejan tanto los derechos de los trabajadores como los intereses legítimos de las empresas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-modal" id="familiarModal">
+        <div class="service-modal-content">
+            <div class="service-modal-header">
+                <h3 class="service-modal-title">Derecho Familiar</h3>
+                <button class="service-modal-close" onclick="closeServiceModal('familiar')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="service-modal-body">
+                <p>Brindamos acompañamiento legal especializado en asuntos de familia, entendiendo la sensibilidad y complejidad emocional que estos casos conllevan.</p>
+                <p>Nos especializamos en procesos de divorcio consensual y contencioso, separación de bienes, custodia y cuidado personal de menores, fijación y revisión de cuotas alimentarias, adopciones, y reconocimiento de paternidad.</p>
+                <p>También atendemos casos de violencia intrafamiliar, medidas de protección, procesos de sucesión, y asesoría en capitulaciones matrimoniales y uniones maritales de hecho.</p>
+                <p>Nuestro enfoque se centra en buscar soluciones que privilegien el bienestar de los menores y la estabilidad familiar, promoviendo cuando es posible los acuerdos conciliatorios.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-modal" id="comercialModal">
+        <div class="service-modal-content">
+            <div class="service-modal-header">
+                <h3 class="service-modal-title">Derecho Comercial</h3>
+                <button class="service-modal-close" onclick="closeServiceModal('comercial')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="service-modal-body">
+                <p>Ofrecemos asesoría integral en Derecho Comercial para empresas de todos los tamaños, desde emprendimientos hasta grandes corporaciones.</p>
+                <p>Nos especializamos en constitución de sociedades, transformaciones empresariales, fusiones y adquisiciones, reestructuraciones societarias, y procesos de liquidación de empresas.</p>
+                <p>También brindamos asesoría en compliance empresarial, contratos comerciales, derecho de la competencia, propiedad intelectual, y representación en controversias comerciales.</p>
+                <p>Nuestro equipo acompaña a las empresas en su crecimiento y desarrollo, asegurando el cumplimiento de las obligaciones legales y la protección de sus intereses comerciales en un entorno empresarial cada vez más complejo.</p>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
